@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SharePlayLearn.css';
+import LoginCtrl from "./LoginCtrl";
 
 class App extends Component {
   render() {
@@ -17,14 +18,14 @@ class App extends Component {
                         <a href="#">Learn</a>
                     </li>
                     <li className="login">
-                        <a href="#/login" id="login-control">Login</a>
                         <a href="#/logout" id="logout-control">Logout</a>
                     </li>
                 </ul>
 
             </div>
             <div id="wrap">
-                <div class="app-content" ng-view>
+                <div class="app-content">
+                    <LoginCtrl/>
                 </div>
             </div>
         </div>

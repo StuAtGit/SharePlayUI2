@@ -3,6 +3,8 @@
 Rebuilding the Share, Play, Learn web UI with Reactjs.
 That about sums it up for now:
 
+Run locally with npm start
+
 TODO:
   - initial style/layout port (done)
   - login/logout component
