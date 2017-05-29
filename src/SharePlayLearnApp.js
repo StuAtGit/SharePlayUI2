@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SharePlayLearn.css';
 import LoginCtrl from "./LoginCtrl";
 
-class App extends Component {
+class SharePlayLearnApp extends Component {
   render() {
     return (
         <div>
@@ -33,4 +33,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default SharePlayLearnApp;
