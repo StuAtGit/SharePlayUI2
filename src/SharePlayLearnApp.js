@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './SharePlayLearn.css';
+import { Route, Link } from 'react-router-dom';
+import Learn from './Learn';
 import LoginCtrl from "./LoginCtrl";
 
 class SharePlayLearnApp extends Component {
@@ -15,7 +17,9 @@ class SharePlayLearnApp extends Component {
                         <a href="#/play">Play</a>
                     </li>
                     <li className="header-section">
-                        <a href="#">Learn</a>
+                        <nav>
+                            <Link to="/Learn">Learn</Link>
+                        </nav>
                     </li>
                     <li className="login">
                         <a href="#/logout" id="logout-control">Logout</a>
@@ -24,6 +28,7 @@ class SharePlayLearnApp extends Component {
 
             </div>
             <div id="wrap">
+                <Route path="/Learn" component={Learn}/>
                 <div class="app-content">
                     <LoginCtrl/>
                 </div>
