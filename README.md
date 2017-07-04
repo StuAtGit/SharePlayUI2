@@ -8,6 +8,11 @@ Run locally with npm start
 TODO:
   - initial style/layout port (done)
   - login/logout component
+    - update auth api to use /login_callback not /#/login_callback 
+        - (dev instance?)
+        - Login button that shows google button (current LoginCtrl)
+        - LoginCtrl needs to detect args OR just two different ctrls
+           (LoginCtrl & LoginCallbackCtrl ???)
   - retrieve items component (and display as list)
   - modal component
   - upload items component
