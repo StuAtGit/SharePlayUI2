@@ -28,9 +28,9 @@ class SharePlayLearnApp extends Component {
 
             </div>
             <div id="wrap">
+                <div className="app-content">
                 <Route path="/Learn" component={Learn}/>
-                <div class="app-content">
-                    <LoginCtrl/>
+                <Route path="/login_callback" component={LoginCtrl}/>
                 </div>
             </div>
         </div>
