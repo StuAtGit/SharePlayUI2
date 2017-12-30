@@ -3,6 +3,7 @@ import './SharePlayLearn.css';
 import { Route, Link } from 'react-router-dom';
 import Learn from './Learn';
 import LoginCtrl from "./LoginCtrl";
+import LoginCallback from './LoginCallback';
 
 class SharePlayLearnApp extends Component {
   render() {
@@ -11,26 +12,27 @@ class SharePlayLearnApp extends Component {
             <div className="header">
                 <ul>
                     <li className="header-section">
-                        <a href="#/share">Share</a>
+                        <a href="/share">Share</a>
                     </li>
                     <li className="header-section">
-                        <a href="#/play">Play</a>
+                        <a href="/play">Play</a>
                     </li>
                     <li className="header-section">
                         <nav>
-                            <Link to="/Learn">Learn</Link>
+                            <Link to="/learn">Learn</Link>
                         </nav>
                     </li>
                     <li className="login">
-                        <a href="#/logout" id="logout-control">Logout</a>
+                        <Link to="/login" id="login-control">Login</Link>
                     </li>
                 </ul>
 
             </div>
             <div id="wrap">
                 <div className="app-content">
-                <Route path="/Learn" component={Learn}/>
-                <Route path="/login_callback" component={LoginCtrl}/>
+                <Route path="/learn" component={Learn}/>
+                <Route path="/login" component={LoginCtrl}/>
+                <Route path="/login_callback" component={LoginCallback}/>
                 </div>
             </div>
         </div>

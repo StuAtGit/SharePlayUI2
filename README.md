@@ -5,14 +5,29 @@ That about sums it up for now:
 
 Run locally with npm start
 
+Note: for testing locally, I redirect to the minty-laptop.com host. You'll need to either change to
+your desired non-localhost localhost or add:
+
+```
+127.0.1.1	minty-laptop.com
+```
+
+To your hosts file
+
+Update to commented out client & redirect before prod deployment
+
 TODO:
   - initial style/layout port (done)
   - login/logout component
     - update auth api to use /login_callback not /#/login_callback 
-        - (dev instance?)
-        - Login button that shows google button (current LoginCtrl)
-        - LoginCtrl needs to detect args OR just two different ctrls
-           (LoginCtrl & LoginCallbackCtrl ???)
+        - LoginCallback needs to be implemented
+    - to extract use info we could either:
+         1) Update our LoginCallback to use the *test* client secret to request info in the UI
+         2) Update our server side auth callback to detect a localhost request, and use the test client 
+             secret to extract the info.
+         (1) reveals the client secret (2) allows public use of our callback with localhost! 
+         Not sure which is best, but I think (2) is.
+        
   - retrieve items component (and display as list)
   - modal component
   - upload items component

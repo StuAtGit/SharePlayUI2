@@ -20,6 +20,8 @@ class LoginCtrl extends Component {
 
     render() {
         if( this.state.userToken === undefined ) {
+            //<input type="hidden" name="client_id" value="726837865357-tqs20u6luqc9oav1bp3vb8ndgavjnrkf.apps.googleusercontent.com"/>
+            //<input type="hidden" name="redirect_uri" value="https://www.shareplaylearn.com/auth_api/oauth2callback"/>
             //insecure_test_token is randomly generated, and checked with the server returns it back to the app
             //but since all our communications are over TLS, it's a bit redundant
             return(
@@ -27,10 +29,10 @@ class LoginCtrl extends Component {
                     Login with Gmail id via Google:<br/>
                     (This site will not see your password)
                     <form method="GET" action="https://accounts.google.com/o/oauth2/auth">
-                        <input type="hidden" name="client_id" value="726837865357-tqs20u6luqc9oav1bp3vb8ndgavjnrkf.apps.googleusercontent.com"/>
+                        <input type="hidden" name="client_id" value="726837865357-fsevsg5ph3npfmivpr8oba6n5s3kg6v2.apps.googleusercontent.com"/>
                         <input type="hidden" name="response_type" value="code"/>
                         <input type="hidden" name="scope" value="openid email"/>
-                        <input type="hidden" name="redirect_uri" value="https://www.shareplaylearn.com/auth_api/oauth2callback"/>
+                        <input type="hidden" name="redirect_uri" value="http://minty-laptop.com:3000/login_callback"/>
                         <input type="hidden" name="state" value="insecure_test_token"/>
                         <input type="submit" value="Log in with Google" className="submit-button"/>
                     </form>
